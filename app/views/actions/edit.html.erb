@@ -1,0 +1,5 @@
+<h1> update Action</h1>
+<%= form_tag "/actions/#{@action.id}", method: 'patch' do %>
+  <input type="text" name="name" value="<%=@action.name%>"/>
+  <input type="submit" value="Update action" />
+<% end %>

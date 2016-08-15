@@ -1,0 +1,12 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">List of the actions</div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <% @action.each do |action| %>
+      <li class="list-group-item list-group-item-default">
+        <p><%= link_to action.name, action_path(action) %></p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

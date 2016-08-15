@@ -1,0 +1,4 @@
+<h1><%= @trader.lastname%></h1>
+<h2><%= @trader.firstname%></h2>
+<%= link_to "Edit", edit_trader_path(@trader)%>
+<%= link_to "Delete", trader_path(@trader), method: :delete, data: {comfirm: "Are you sure ?"}%>

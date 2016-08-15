@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">List of the traders</div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <% @traders.each do |trader| %>
+        <li class="list-group-item list-group-item-default">
+          <p><%= link_to trader.lastname, trader_path(trader) %></p>
+          <p><%= trader.firstname%></p>
+          <p><%= trader.value%></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

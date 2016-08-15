@@ -1,0 +1,18 @@
+<h1> New Transaction</h1>
+<%= form_tag '/transactions', method: 'post' do %>
+  <select id="trader">
+    <% @trade.each do |trader| %>
+      <option  > <%=trader.lastname%>  <%=trader.firstname%></option>
+    <% end %>
+  </select>
+
+  <!--<select name="action">
+    <% @actions.each do |action| %>
+      <option > <%=action.name%> </option>
+    <% end %>
+  </select>-->
+
+  <input type="number" name="quantity" />
+  <input type="number" name="price" />
+  <input type="submit" value="Add new transaction" />
+<% end %>

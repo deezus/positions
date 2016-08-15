@@ -1,0 +1,6 @@
+<h1> update Trader</h1>
+<%= form_tag "/traders/#{@trader.id}", method: 'patch' do %>
+  <input type="text" name="firstname" value="<%=@trader.firstname%>"/>
+  <input type="text" name="lastname" value="<%=@trader.lastname%>"/>
+  <input type="submit" value="Update trader" />
+<% end %>

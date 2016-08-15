@@ -1,0 +1,19 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">List of the transactions</div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <% @transaction.each do |transaction| %>
+        <li class="list-group-item list-group-item-default">
+          <% trader = transaction.trader %>
+          <% action = transaction.action %>
+          <p><%= link_to transaction.id, transaction_path(transaction) %></p>
+          <p><%= trader.lastname %></p>
+          <p><%= trader.firstname %></p>
+          <p><%= action.name %></p>
+          <p><%= transaction.quantity%></p>
+          <p><%= transaction.price%></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
